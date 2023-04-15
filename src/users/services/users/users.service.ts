@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { plainToClass } from 'class-transformer';
 import { SerializedUser, User } from 'src/users/types';
 
 @Injectable()
