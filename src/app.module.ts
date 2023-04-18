@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { CustomerModule } from './customers/customer.module';
 import { UsersModule } from './users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import entities from './typeorm';
 
 @Module({
   imports: [
@@ -11,10 +12,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       type: 'mysql',
       host: 'localhost',
       port: 3306,
-      username: 'testuser',
-      password: 'testuser',
-      database: 'nestjs_in_depth',
-      entities: [],
+      username: 'root',
+      password: '',
+      database: 'nestjs-in-depth',
+      entities,
       synchronize: true,
     }),
   ],
